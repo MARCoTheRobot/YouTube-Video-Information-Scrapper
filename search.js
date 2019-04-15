@@ -3,7 +3,7 @@ const fs = require('fs');
 
 var outputJson = [];
 
-ytSearch( {query:'incredible fishing stories',isEmbeddable:true}, function ( err, r ) {
+ytSearch( {query:'Programming Videos',isEmbeddable:true}, function ( err, r ) {
   if ( err ) throw err
   for (var i = 0; i < 20; i++) { 
       const videos = r.videos
@@ -28,7 +28,7 @@ ytSearch( {query:'incredible fishing stories',isEmbeddable:true}, function ( err
         outputJson.push(myJson);
 
         json = JSON.stringify(outputJson);
-        fs.writeFile('./fishing.json', json, (err) => {
+        fs.writeFile('./ProgrammingVideos.json', json, (err) => {
             if (!err) {
                 console.log('done');
             }
